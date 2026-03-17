@@ -710,12 +710,12 @@ const App: React.FC = () => {
       {/* Persistence Status Footer */}
       <footer className="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-md border-t border-slate-200 px-6 py-3 flex flex-col items-center justify-center gap-1 z-[100]">
          <div className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-            <div className="flex items-center gap-1.5 text-green-600">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>ডেটা সংরক্ষিত (Local Storage)</span>
-            </div>
-            {lastSaved && <span className="text-slate-300">•</span>}
-            {lastSaved && <span>সর্বশেষ সেভ: {lastSaved}</span>}
+            {lastSaved && (
+              <div className="flex items-center gap-1.5 text-green-600">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>সর্বশেষ সেভ: {lastSaved}</span>
+              </div>
+            )}
          </div>
          {/* FEATURE 2: Demo Watermark */}
          <div className="text-[10px] text-slate-300 font-medium select-none">
